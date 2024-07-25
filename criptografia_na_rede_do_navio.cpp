@@ -3,7 +3,7 @@
 using namespace std;
 
 
-string binarioParaTexto(const string& binario) {
+string binarioParaTexto(string binario) {
     string texto;
     for (size_t i = 0; i < binario.size(); i += 8) {
         // Pega um byte (8 bits)
@@ -38,16 +38,8 @@ int main()
     }
 
     for(int i = 0; i < index; i++) {
-        if (vetor1[i][6] == '0') {
-            vetor1[i][6] = '1';
-        }else {
-            vetor1[i][6] == '0';
-        }
-        if (vetor1[i][7] == '0') {
-            vetor1[i][7] = '1';
-        }else {
-            vetor1[i][7] = '0';
-        }
+        vetor1[i][6] = (vetor1[i][6] == '0') ? '1' : '0';
+        vetor1[i][7] = (vetor1[i][7] == '0') ? '1' : '0';
     }
 
 
